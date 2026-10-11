@@ -4,11 +4,13 @@ import React, { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import VideoScrubber from "@/components/VideoScrubber";
 import Footer from "@/components/Footer";
+import type { Language } from "@/lib/translations";
 
 export default function Home() {
   const [theme, setTheme] = useState<"light" | "dark">("light");
+  const [language, setLanguageState] = useState<Language>("en");
 
-  // Synchronize theme on load
+  // Synchronize saved preferences on load
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme") as "light" | "dark";
     if (savedTheme) {
@@ -25,6 +27,12 @@ export default function Home() {
         document.documentElement.classList.add("dark");
       }
     }
+
+    const savedLanguage = localStorage.getItem("language");
+    if (savedLanguage === "en" || savedLanguage === "hi" || savedLanguage === "mr") {
+      setLanguageState(savedLanguage);
+      document.documentElement.lang = savedLanguage;
+    }
   }, []);
 
   const toggleTheme = () => {
@@ -38,18 +46,29 @@ export default function Home() {
     }
   };
 
+  const setLanguage = (newLanguage: Language) => {
+    setLanguageState(newLanguage);
+    localStorage.setItem("language", newLanguage);
+    document.documentElement.lang = newLanguage;
+  };
+
   return (
-    <div className="bg-[#FBF9F1] dark:bg-[#0B0F17] min-h-screen text-[#0F172A] dark:text-[#F8FAFC] relative selection:bg-farm-green/20 selection:text-slate-800 transition-colors duration-500">
+    <div className="bg-white dark:bg-[#0B0F17] min-h-screen text-[#0F172A] dark:text-[#F8FAFC] relative selection:bg-farm-green/20 selection:text-slate-800 transition-colors duration-500">
       {/* Sticky header navbar with theme actions */}
-      <Navbar theme={theme} toggleTheme={toggleTheme} />
+      <Navbar
+        theme={theme}
+        toggleTheme={toggleTheme}
+        language={language}
+        setLanguage={setLanguage}
+      />
       
       <main>
         {/* Full-viewport Video Scrollytelling Scrubber */}
-        <VideoScrubber theme={theme} />
+        <VideoScrubber theme={theme} language={language} />
       </main>
 
       {/* Footer system details */}
-      <Footer />
+      <Footer language={language} />
     </div>
   );
 }

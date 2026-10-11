@@ -13,6 +13,8 @@ import {
   ShieldAlert, 
   ArrowDown 
 } from "lucide-react";
+import type { Language } from "@/lib/translations";
+import translations from "@/lib/translations";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -20,11 +22,13 @@ if (typeof window !== "undefined") {
 
 interface VideoScrubberProps {
   theme: "light" | "dark";
+  language: Language;
 }
 
 const TOTAL_FRAMES = 200;
 
-export default function VideoScrubber({ theme }: VideoScrubberProps) {
+export default function VideoScrubber({ theme, language }: VideoScrubberProps) {
+  const t = translations[language].video;
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const imagesRef = useRef<HTMLImageElement[]>([]);
@@ -193,16 +197,16 @@ export default function VideoScrubber({ theme }: VideoScrubberProps) {
                 <div className={`p-4 md:p-6 rounded-3xl space-y-3 ${cardThemeClass}`}>
                   <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-extrabold uppercase bg-emerald-100 dark:bg-emerald-950/40 text-[#10B981] dark:text-[#34D399]">
                     <Sprout className="w-3 h-3" />
-                    <span>🌱 Neuro-Symbolic AI Platform</span>
+                    <span>🌱 {t.aiPlatform}</span>
                   </div>
                   <h2 className="text-2xl font-extrabold tracking-tight leading-snug">
-                    Cropify OS: Creating Your Digital Twin
+                    {t.digitalTwinTitle}
                   </h2>
                   <p className="text-[12px] opacity-80 leading-relaxed font-bold">
-                    Real-time satellite & drone mapping digitizes your physical farm into an active 3D virtual sandbox.
+                    {t.digitalTwinDescription}
                   </p>
                   <div className="flex items-center gap-1.5 text-[10px] font-extrabold opacity-60">
-                    <span>Scroll to diagnostics</span>
+                    <span>{t.scrollDiagnostics}</span>
                     <ArrowDown className="w-2.5 h-2.5 animate-bounce" />
                   </div>
                 </div>
@@ -218,10 +222,10 @@ export default function VideoScrubber({ theme }: VideoScrubberProps) {
               >
                 <div className={`p-4 md:p-6 rounded-3xl space-y-3 ${cardThemeClass}`}>
                   <h2 className="text-2xl font-extrabold tracking-tight">
-                    Risk-Free Virtual Simulation
+                    {t.simulationTitle}
                   </h2>
                   <p className="text-[12px] opacity-80 leading-relaxed font-bold">
-                    Test crop rotations and water schedules in the virtual farm before spending money in the real world.
+                    {t.simulationDescription}
                   </p>
 
                   <div className="flex flex-col gap-2 pt-1.5">
@@ -229,19 +233,19 @@ export default function VideoScrubber({ theme }: VideoScrubberProps) {
                       <div className="p-1 bg-amber-100 dark:bg-amber-950/40 rounded-lg">
                         <TrendingUp className="w-3.5 h-3.5 text-[#F59E0B]" />
                       </div>
-                      <span className="text-[11px] font-extrabold">+25% Profit Boost</span>
+                      <span className="text-[11px] font-extrabold">{t.profitBoost}</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <div className="p-1 bg-sky-100 dark:bg-sky-950/40 rounded-lg">
                         <Droplet className="w-3.5 h-3.5 text-[#06B6D4]" />
                       </div>
-                      <span className="text-[11px] font-extrabold">1,200L Water Saved</span>
+                      <span className="text-[11px] font-extrabold">{t.waterSaved}</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <div className="p-1 bg-emerald-100 dark:bg-emerald-950/40 rounded-lg">
                         <Coins className="w-3.5 h-3.5 text-[#10B981]" />
                       </div>
-                      <span className="text-[11px] font-extrabold">+$420 Carbon Credits</span>
+                      <span className="text-[11px] font-extrabold">{t.carbonCredits}</span>
                     </div>
                   </div>
                 </div>
@@ -265,17 +269,17 @@ export default function VideoScrubber({ theme }: VideoScrubberProps) {
               >
                 <div className={`p-4 md:p-6 rounded-3xl space-y-3 ${cardThemeClass}`}>
                   <h2 className="text-2xl font-extrabold tracking-tight">
-                    Instant Soil Diagnostics
+                    {t.soilDiagnostics}
                   </h2>
                   
                   <div className="grid grid-cols-2 gap-2 text-[10px]">
-                    <div className="p-2 bg-[#EBF4F6] dark:bg-slate-800 rounded-xl border border-slate-200/50 dark:border-slate-700">
-                      <span className="opacity-65 font-extrabold block">NPK HEALTH</span>
-                      <span className="font-extrabold text-[#10B981] dark:text-[#34D399]">94% Excellent</span>
+                    <div className="p-2 bg-white dark:bg-slate-800 rounded-xl border border-slate-200/50 dark:border-slate-700">
+                      <span className="opacity-65 font-extrabold block">{t.npkHealth}</span>
+                      <span className="font-extrabold text-[#10B981] dark:text-[#34D399]">{t.excellent}</span>
                     </div>
-                    <div className="p-2 bg-[#EBF4F6] dark:bg-slate-800 rounded-xl border border-slate-200/50 dark:border-slate-700">
-                      <span className="opacity-65 font-extrabold block">MOISTURE</span>
-                      <span className="font-extrabold text-[#06B6D4]">42% Optimum</span>
+                    <div className="p-2 bg-white dark:bg-slate-800 rounded-xl border border-slate-200/50 dark:border-slate-700">
+                      <span className="opacity-65 font-extrabold block">{t.moisture}</span>
+                      <span className="font-extrabold text-[#06B6D4]">{t.optimum}</span>
                     </div>
                   </div>
 
@@ -283,13 +287,13 @@ export default function VideoScrubber({ theme }: VideoScrubberProps) {
                     <div className="flex items-start gap-2 p-2 bg-emerald-500/10 border border-[#10B981]/20 rounded-xl">
                       <ShieldCheck className="w-3.5 h-3.5 text-[#10B981] mt-0.5 flex-shrink-0" />
                       <span className="text-[#065F46] dark:text-[#34D399]">
-                        <strong>DO:</strong> Tomato Seeds (+22% predicted)
+                        <strong>{t.do}</strong> {t.plantAdvice}
                       </span>
                     </div>
                     <div className="flex items-start gap-2 p-2 bg-red-500/10 border border-red-500/20 rounded-xl">
                       <ShieldAlert className="w-3.5 h-3.5 text-red-500 mt-0.5 flex-shrink-0" />
                       <span className="text-red-700 dark:text-red-400">
-                        <strong>DON'T:</strong> Flood irrigate (Rain forecasted)
+                        <strong>{t.dont}</strong> {t.irrigationAdvice}
                       </span>
                     </div>
                   </div>
@@ -309,16 +313,16 @@ export default function VideoScrubber({ theme }: VideoScrubberProps) {
                     <Sparkles className="w-5 h-5 text-[#10B981] dark:text-[#34D399] animate-float" />
                   </div>
                   <h2 className="text-xl font-extrabold tracking-tight">
-                    Ready to Transform Decisions?
+                    {t.transformTitle}
                   </h2>
                   <p className="text-[11px] opacity-80 leading-relaxed font-bold">
-                    Join thousands of modern farmers optimizing yield and cutting costs.
+                    {t.transformDescription}
                   </p>
                   <button
                     onClick={() => setShowLaunchModal(true)}
                     className="w-full py-2.5 bg-[#10B981] dark:bg-[#34D399] text-white dark:text-[#0B0F17] font-sans text-xs font-extrabold rounded-full tracking-wider transition-all duration-300 shadow-farm hover:scale-105 active:scale-95 animate-bounce-slow cursor-pointer"
                   >
-                    🚀 Launch Application
+                    {t.launchApplication}
                   </button>
                 </div>
               </div>
@@ -330,7 +334,7 @@ export default function VideoScrubber({ theme }: VideoScrubberProps) {
 
         {/* Scroll Progress slider bar */}
         <div className="absolute bottom-6 right-6 z-30 flex items-center gap-3 bg-white/80 dark:bg-[#0B0F17]/85 backdrop-blur-md border border-slate-200 dark:border-slate-800 p-2.5 rounded-full shadow-sm text-[10px] font-sans font-bold text-slate-400 pointer-events-none">
-          <span>Simulation Progress</span>
+          <span>{t.simulationProgress}</span>
           <div className="w-24 h-1.5 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
             <div 
               className="h-full bg-[#10B981]" 
@@ -346,70 +350,70 @@ export default function VideoScrubber({ theme }: VideoScrubberProps) {
       <div className="block lg:hidden max-w-2xl mx-auto px-6 py-24 space-y-8 z-20 relative">
         
         {/* Compact static view of first sequence frame */}
-        <div className="w-full aspect-video rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-lg mb-6 bg-slate-100 flex items-center justify-center">
-          <span className="text-xs text-slate-400 font-bold">Virtual Twin Active</span>
+        <div className="w-full aspect-video rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-lg mb-6 bg-white dark:bg-slate-900 flex items-center justify-center">
+          <span className="text-xs text-slate-400 font-bold">{t.virtualTwinActive}</span>
         </div>
 
         {/* Mobile Card 1 */}
         <div className={`p-4 rounded-3xl space-y-3 ${cardThemeClass}`}>
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-extrabold bg-emerald-100 dark:bg-emerald-950/40 text-farm-green">
             <Sprout className="w-3 h-3" />
-            <span>🌱 AI PLATFORM</span>
+            <span>{t.aiPlatformShort}</span>
           </div>
           <h3 className="text-lg font-extrabold">
-            Cropify OS: Creating Your Digital Twin
+            {t.digitalTwinTitle}
           </h3>
           <p className="text-xs opacity-80 font-bold">
-            Real-time satellite & drone mapping digitizes your physical farm into an active 3D virtual sandbox.
+            {t.digitalTwinDescription}
           </p>
         </div>
 
         {/* Mobile Card 2 */}
         <div className={`p-4 rounded-3xl space-y-3 ${cardThemeClass}`}>
           <h3 className="text-lg font-extrabold">
-            Instant Soil Diagnostics
+            {t.soilDiagnostics}
           </h3>
           <div className="grid grid-cols-2 gap-2 text-[10px]">
-            <div className="p-2 bg-[#EBF4F6] dark:bg-slate-800 rounded-xl">
-              <span className="opacity-65 font-extrabold block">NPK HEALTH</span>
-              <span className="font-bold text-farm-green">94% Excellent</span>
+            <div className="p-2 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700">
+              <span className="opacity-65 font-extrabold block">{t.npkHealth}</span>
+              <span className="font-bold text-farm-green">{t.excellent}</span>
             </div>
-            <div className="p-2 bg-[#EBF4F6] dark:bg-slate-800 rounded-xl">
-              <span className="opacity-65 font-extrabold block">MOISTURE</span>
-              <span className="font-bold text-[#06B6D4]">42% Optimum</span>
+            <div className="p-2 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700">
+              <span className="opacity-65 font-extrabold block">{t.moisture}</span>
+              <span className="font-bold text-[#06B6D4]">{t.optimum}</span>
             </div>
           </div>
           <div className="space-y-1 text-xs font-bold">
-            <div className="text-farm-green">✅ DO: Plant Tomato Hybrid Seeds (+22%)</div>
-            <div className="text-red-500">❌ DON'T: Irrigate today — Rain incoming</div>
+            <div className="text-farm-green">{t.plantHybrid}</div>
+            <div className="text-red-500">{t.rainIncoming}</div>
           </div>
         </div>
 
         {/* Mobile Card 3 */}
         <div className={`p-4 rounded-3xl space-y-3 ${cardThemeClass}`}>
           <h3 className="text-lg font-extrabold">
-            Risk-Free Virtual Simulation
+            {t.simulationTitle}
           </h3>
           <p className="text-xs opacity-80 font-bold">
-            Test crop rotations and water schedules in the virtual farm before spending money in the real world.
+            {t.simulationDescription}
           </p>
           <div className="flex flex-col gap-1.5 pt-1 text-xs font-extrabold opacity-75">
-            <div>🏆 +25% Profit Boost</div>
-            <div>💧 1,200L Water Saved</div>
-            <div>🌱 +$420 Carbon Credits</div>
+            <div>🏆 {t.profitBoost}</div>
+            <div>💧 {t.waterSaved}</div>
+            <div>🌱 {t.carbonCredits}</div>
           </div>
         </div>
 
         {/* Mobile Card 4 */}
         <div className={`p-4 rounded-3xl text-center space-y-4 ${cardThemeClass}`}>
           <h3 className="text-lg font-extrabold">
-            Ready to Transform Your Farm Decisions?
+            {t.transformFarmTitle}
           </h3>
           <button
             onClick={() => setShowLaunchModal(true)}
             className="w-full py-3 bg-[#10B981] dark:bg-[#34D399] text-white dark:text-[#0B0F17] font-sans text-xs font-extrabold rounded-full tracking-wider shadow-farm"
           >
-            🚀 Launch Application
+            {t.launchApplication}
           </button>
         </div>
       </div>
@@ -422,19 +426,19 @@ export default function VideoScrubber({ theme }: VideoScrubberProps) {
               <Sparkles className="w-8 h-8 text-[#10B981] dark:text-[#34D399] animate-float" />
             </div>
             <h3 className="text-xl font-extrabold text-[#0F172A] dark:text-[#F8FAFC]">
-              Entering Virtual Twin Sandbox!
+              {t.modalTitle}
             </h3>
             <p className="text-slate-500 dark:text-[#94A3B8] text-xs font-bold leading-relaxed">
-              System is synchronizing real-time multispectral drone arrays and loading the Neo4j Knowledge Graph. Prepare for intercropping recommendations!
+              {t.modalDescription}
             </p>
-            <div className="bg-[#EBF4F6] dark:bg-slate-900 p-3 rounded-2xl border border-slate-200/50 dark:border-slate-850 text-[10px] font-sans font-bold text-slate-400">
-              SYS_TELEMETRY: ONLINE (v3.2.1-PROLOG)
+            <div className="bg-white dark:bg-slate-900 p-3 rounded-2xl border border-slate-200 dark:border-slate-850 text-[10px] font-sans font-bold text-slate-400">
+              {t.telemetry}
             </div>
             <button
               onClick={() => setShowLaunchModal(false)}
               className="px-6 py-2.5 bg-[#10B981] dark:bg-[#34D399] text-white dark:text-[#0B0F17] font-sans text-xs font-extrabold rounded-full shadow-farm cursor-pointer"
             >
-              Close Console
+              {t.closeConsole}
             </button>
           </div>
         </div>

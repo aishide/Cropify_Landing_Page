@@ -108,7 +108,7 @@ export default function ScrollytellingCanvas({ theme }: ScrollytellingCanvasProp
     const isDark = theme === "dark";
 
     // 1. Clear backgrounds (mapped to hex codes)
-    ctx.fillStyle = isDark ? "#0B0F17" : "#FBF9F1";
+    ctx.fillStyle = isDark ? "#0B0F17" : "#FFFFFF";
     ctx.fillRect(0, 0, width, height);
 
     // Draw background gradients
@@ -117,8 +117,8 @@ export default function ScrollytellingCanvas({ theme }: ScrollytellingCanvasProp
       bgGrad.addColorStop(0, "#0B0F17");
       bgGrad.addColorStop(1, "#0F172A");
     } else {
-      bgGrad.addColorStop(0, "#FBF9F1");
-      bgGrad.addColorStop(1, "#EBF4F6");
+      bgGrad.addColorStop(0, "#FFFFFF");
+      bgGrad.addColorStop(1, "#FFFFFF");
     }
     ctx.fillStyle = bgGrad;
     ctx.fillRect(0, 0, width, height);
@@ -393,7 +393,7 @@ export default function ScrollytellingCanvas({ theme }: ScrollytellingCanvasProp
 
     // Draw NPK, Moisture progress lines
     if (sp > 0.2) {
-      ctx.fillStyle = isDark ? "rgba(52, 211, 153, 0.15)" : "#EBF4F6";
+      ctx.fillStyle = isDark ? "rgba(52, 211, 153, 0.15)" : "#FFFFFF";
       ctx.fillRect(barX, sy + 60, barW, barH);
       ctx.fillStyle = "#10B981";
       ctx.fillRect(barX, sy + 60, barW * 0.95 * Math.min(1.0, (sp - 0.2) / 0.8), barH);
@@ -403,7 +403,7 @@ export default function ScrollytellingCanvas({ theme }: ScrollytellingCanvasProp
     }
 
     if (sp > 0.5) {
-      ctx.fillStyle = isDark ? "rgba(6, 182, 212, 0.15)" : "#EBF4F6";
+      ctx.fillStyle = isDark ? "rgba(6, 182, 212, 0.15)" : "#FFFFFF";
       ctx.fillRect(barX, sy + 90, barW, barH);
       ctx.fillStyle = "#06B6D4";
       ctx.fillRect(barX, sy + 90, barW * 0.42 * Math.min(1.0, (sp - 0.5) / 0.5), barH);
@@ -426,7 +426,7 @@ export default function ScrollytellingCanvas({ theme }: ScrollytellingCanvasProp
 
     // DO Card
     if (sp > 0.2) {
-      ctx.fillStyle = isDark ? "rgba(52, 211, 153, 0.15)" : "#EBF4F6";
+      ctx.fillStyle = isDark ? "rgba(52, 211, 153, 0.15)" : "#FFFFFF";
       ctx.strokeStyle = isDark ? "#34D399" : "#10B981";
       ctx.lineWidth = 1.5;
       ctx.beginPath();
@@ -507,7 +507,7 @@ export default function ScrollytellingCanvas({ theme }: ScrollytellingCanvasProp
 
     if (sp > 0.4) {
       // Water saved badge
-      ctx.fillStyle = isDark ? "rgba(6, 182, 212, 0.15)" : "#EBF4F6";
+      ctx.fillStyle = isDark ? "rgba(6, 182, 212, 0.15)" : "#FFFFFF";
       ctx.strokeStyle = "#06B6D4";
       ctx.lineWidth = 1.5;
       ctx.beginPath();
@@ -606,7 +606,7 @@ export default function ScrollytellingCanvas({ theme }: ScrollytellingCanvasProp
     <section 
       ref={containerRef} 
       id="scrollytelling" 
-      className="relative w-full h-screen flex flex-col justify-center overflow-hidden transition-colors duration-500 bg-[#FBF9F1] dark:bg-[#0B0F17]"
+      className="relative w-full h-screen flex flex-col justify-center overflow-hidden transition-colors duration-500 bg-white dark:bg-[#0B0F17]"
     >
       {/* Blueprint dot pattern overlays */}
       <div className="absolute inset-0 bg-dot-pattern pointer-events-none opacity-40"></div>
@@ -694,7 +694,7 @@ export default function ScrollytellingCanvas({ theme }: ScrollytellingCanvasProp
             <p className="text-slate-500 dark:text-slate-350 text-xs font-bold leading-relaxed">
               System is synchronizing real-time multispectral drone arrays and loading the Neo4j Knowledge Graph. Prepare for intercropping recommendations!
             </p>
-            <div className="bg-[#fbf9f4] dark:bg-slate-900 p-3 rounded-2xl border border-orange-100/50 dark:border-slate-800 text-[10px] font-sans font-bold text-slate-400">
+            <div className="bg-white dark:bg-slate-900 p-3 rounded-2xl border border-slate-200 dark:border-slate-800 text-[10px] font-sans font-bold text-slate-400">
               SYS_TELEMETRY: ONLINE (v3.2.1-PROLOG)
             </div>
             <button
@@ -710,7 +710,7 @@ export default function ScrollytellingCanvas({ theme }: ScrollytellingCanvasProp
       {/* Progress tracker */}
       <div className="absolute bottom-6 right-6 z-10 hidden lg:flex items-center gap-3 bg-white/80 dark:bg-[#0b0f17]/85 backdrop-blur-md border border-slate-200 dark:border-slate-800 p-2.5 rounded-full shadow-sm text-[10px] font-sans font-bold text-slate-400 transition-colors pointer-events-none">
         <span>Story Progress</span>
-        <div className="w-24 h-1.5 bg-orange-100 dark:bg-slate-800 rounded-full overflow-hidden">
+        <div className="w-24 h-1.5 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
           <div 
             className="h-full bg-farm-green transition-all" 
             style={{ width: `${scrollProgress * 100}%` }}
