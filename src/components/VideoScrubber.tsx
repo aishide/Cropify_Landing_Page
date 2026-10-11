@@ -196,7 +196,7 @@ export default function VideoScrubber({ theme }: VideoScrubberProps) {
                     <span>🌱 Neuro-Symbolic AI Platform</span>
                   </div>
                   <h2 className="text-2xl font-extrabold tracking-tight leading-snug">
-                    AgriTwin OS: Creating Your Digital Twin
+                    Cropify OS: Creating Your Digital Twin
                   </h2>
                   <p className="text-[12px] opacity-80 leading-relaxed font-bold">
                     Real-time satellite & drone mapping digitizes your physical farm into an active 3D virtual sandbox.
@@ -357,7 +357,7 @@ export default function VideoScrubber({ theme }: VideoScrubberProps) {
             <span>🌱 AI PLATFORM</span>
           </div>
           <h3 className="text-lg font-extrabold">
-            AgriTwin OS: Creating Your Digital Twin
+            Cropify OS: Creating Your Digital Twin
           </h3>
           <p className="text-xs opacity-80 font-bold">
             Real-time satellite & drone mapping digitizes your physical farm into an active 3D virtual sandbox.

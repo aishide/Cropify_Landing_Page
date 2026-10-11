@@ -531,7 +531,7 @@ export default function ScrollytellingCanvas({ theme }: ScrollytellingCanvasProp
     ctx.fillStyle = isDark ? "#F8FAFC" : "#1E293B";
     ctx.font = "extrabold 12px sans-serif";
     ctx.textAlign = "center";
-    ctx.fillText("AGRITWIN SANDBOX", sx + sw / 2, sy + sh / 2 - 20);
+    ctx.fillText("CROPIFY SANDBOX", sx + sw / 2, sy + sh / 2 - 20);
 
     ctx.fillStyle = isDark ? "#34D399" : "#10B981";
     ctx.font = "bold 9px sans-serif";
@@ -568,7 +568,7 @@ export default function ScrollytellingCanvas({ theme }: ScrollytellingCanvasProp
     {
       badge: "🌱 Friendly AI for Modern Farming",
       title: "The Intelligent Operating System for Modern Agriculture",
-      desc: "Meet Farmer Raj! He is standing on his land looking uncertain about his next crop cycle. Scroll down to see how AgriTwin helps him!"
+      desc: "Meet Farmer Raj! He is standing on his land looking uncertain about his next crop cycle. Scroll down to see how Cropify helps him!"
     },
     {
       badge: "Step 1: Creating Your Digital Twin",
@@ -597,7 +597,7 @@ export default function ScrollytellingCanvas({ theme }: ScrollytellingCanvasProp
     },
     {
       badge: "Step 6: Ready to Begin?",
-      title: "Launch AgriTwin OS",
+      title: "Launch Cropify OS",
       desc: "Ready to test your farm decisions risk-free? Click the glowing launch button inside the phone frame to unlock the sandbox!"
     }
   ];

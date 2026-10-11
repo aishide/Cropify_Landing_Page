@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AgriTwin OS — The Intelligent Operating System for Modern Agriculture",
+  title: "Cropify OS — The Intelligent Operating System for Modern Agriculture",
   description: "A Neuro-Symbolic AI Platform that creates a Digital Twin of every farm, enabling farmers to simulate, predict, optimize, and manage their farm before making real-world decisions.",
 };
 

@@ -20,7 +20,7 @@ export default function Footer() {
                 <Sprout className="w-5 h-5 text-farm-green" />
               </div>
               <span className="font-extrabold text-lg tracking-tight text-[#0F172A] dark:text-[#F8FAFC] font-sans">
-                AgriTwin <span className="text-farm-green">OS</span>
+                Cropify <span className="text-farm-green">OS</span>
               </span>
             </div>
             <p className="text-slate-505 dark:text-[#94A3B8] text-xs font-semibold max-w-sm leading-relaxed">
@@ -86,7 +86,7 @@ export default function Footer() {
         {/* Bottom copyright */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 font-sans text-[10px] font-bold text-slate-400 dark:text-slate-500">
           <div>
-            &copy; {new Date().getFullYear()} AgriTwin OS. Open-Core Farm License.
+            &copy; {new Date().getFullYear()} Cropify OS. Open-Core Farm License.
           </div>
           <div className="flex items-center gap-6">
             <a href="#" className="hover:text-slate-600 dark:hover:text-slate-350 transition-colors flex items-center gap-1">

@@ -21,7 +21,7 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
             <Sprout className="w-5 h-5 text-farm-green animate-float" />
           </div>
           <span className="font-extrabold text-lg tracking-tight text-[#0F172A] dark:text-[#F8FAFC] flex items-center gap-1 font-sans transition-colors">
-            AgriTwin <span className="text-farm-green">OS</span>
+            Cropify <span className="text-farm-green">OS</span>
           </span>
         </a>
 

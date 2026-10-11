@@ -1,7 +1,7 @@
-🌱 AgriTwin
+🌱 Cropify
 
 <p align="center">
-  <img src="https://img.shields.io/badge/AgriTwin-Smart%20Agriculture-4CAF50?style=for-the-badge" alt="AgriTwin">
+  <img src="https://img.shields.io/badge/Cropify-Smart%20Agriculture-4CAF50?style=for-the-badge" alt="Cropify">
   <img src="https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js" alt="Next.js">
   <img src="https://img.shields.io/badge/TypeScript-blue?style=for-the-badge&logo=typescript" alt="TypeScript">
   <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge" alt="Status">
@@ -10,11 +10,11 @@
   🌾 Reimagining Agriculture Through Digital Intelligence
 </h3>
 <p align="center">
-  AgriTwin is a modern digital agriculture experience designed to visualize,<br>
+  Cropify is a modern digital agriculture experience designed to visualize,<br>
   understand, and interact with the future of smart farming.
 </p>
 <p align="center">
-  <a href="https://github.com/aishide/AgriTwin_Landing_Page">View Repository</a>
+  <a href="https://github.com/aishide/Cropify_Landing_Page">View Repository</a>
   ·
   <a href="#-features">Features</a>
   ·
@@ -23,11 +23,11 @@
 
 ⸻
 
-🌾 What is AgriTwin?
+🌾 What is Cropify?
 
-AgriTwin brings the concept of a Digital Twin for agriculture to life through an immersive web experience.
+Cropify brings the concept of a Digital Twin for agriculture to life through an immersive web experience.
 
-Instead of presenting agricultural technology through static information, AgriTwin focuses on visual storytelling, interactive experiences, and intuitive design to demonstrate how technology can transform modern farming.
+Instead of presenting agricultural technology through static information, Cropify focuses on visual storytelling, interactive experiences, and intuitive design to demonstrate how technology can transform modern farming.
 
 The platform represents the intersection of:
 
@@ -37,18 +37,18 @@ The platform represents the intersection of:
       +
 📊 Data & Intelligence
       ↓
-🌾 AgriTwin
+🌾 Cropify
 
 ⸻
 
-✨ Experience AgriTwin
+✨ Experience Cropify
 
 🌱 Immersive Agricultural Storytelling
 
 The landing page uses interactive visual sequences to take users through the agricultural ecosystem.
 
 <p align="center">
-  <img src="./public/preview.gif" alt="AgriTwin Interactive Experience" width="90%">
+  <img src="./public/preview.gif" alt="Cropify Interactive Experience" width="90%">
 </p>
 
 Replace ./public/preview.gif with your actual project preview GIF/video when available.
@@ -57,7 +57,7 @@ Replace ./public/preview.gif with your actual project preview GIF/video when ava
 
 🎥 Interactive Visual Experience
 
-One of the core experiences of AgriTwin is its scroll-driven visual storytelling.
+One of the core experiences of Cropify is its scroll-driven visual storytelling.
 
 As users scroll, the agricultural environment evolves through a sequence of visual frames, creating a dynamic digital-twin experience.
 
@@ -120,7 +120,7 @@ Visual-first design focused on:
 
 🧩 Project Architecture
 
-AgriTwin_Landing_Page
+Cropify_Landing_Page
 │
 ├── 📁 public
 │   └── 🌾 farmer frames
@@ -159,11 +159,11 @@ Technology	Purpose
 
 1. Clone the repository
 
-git clone https://github.com/aishide/AgriTwin_Landing_Page.git
+git clone https://github.com/aishide/Cropify_Landing_Page.git
 
 2. Navigate to the project
 
-cd AgriTwin_Landing_Page
+cd Cropify_Landing_Page
 
 3. Install dependencies
 
@@ -196,19 +196,19 @@ npm start
 🌱 Landing Experience
 
 <p align="center">
-  <img src="./public/screenshots/home.png" alt="AgriTwin Home" width="90%">
+  <img src="./public/screenshots/home.png" alt="Cropify Home" width="90%">
 </p>
 
 🌾 Digital Twin Experience
 
 <p align="center">
-  <img src="./public/screenshots/digital-twin.png" alt="AgriTwin Digital Twin" width="90%">
+  <img src="./public/screenshots/digital-twin.png" alt="Cropify Digital Twin" width="90%">
 </p>
 
 🎬 Interactive Scrolling
 
 <p align="center">
-  <img src="./public/screenshots/scrollytelling.png" alt="AgriTwin Scrollytelling" width="90%">
+  <img src="./public/screenshots/scrollytelling.png" alt="Cropify Scrollytelling" width="90%">
 </p>
 
 Add your actual screenshots to public/screenshots/ using the filenames above.
@@ -217,7 +217,7 @@ Add your actual screenshots to public/screenshots/ using the filenames above.
 
 🧠 How It Works
 
-AgriTwin combines scroll interaction + frame rendering + visual storytelling to create the core experience.
+Cropify combines scroll interaction + frame rendering + visual storytelling to create the core experience.
 
 flowchart LR
     A[👤 User] --> B[🖱️ Scroll]
@@ -232,7 +232,7 @@ flowchart LR
 
 Agriculture is becoming increasingly connected with technology.
 
-AgriTwin explores how digital twins, interactive visualization, and intelligent systems can help communicate and shape the future of agriculture.
+Cropify explores how digital twins, interactive visualization, and intelligent systems can help communicate and shape the future of agriculture.
 
 Our vision:
 
@@ -242,7 +242,7 @@ Make agriculture smarter, more connected, and more sustainable through technolog
 
 🔮 Future Scope
 
-AgriTwin can be extended with:
+Cropify can be extended with:
 
 * 🤖 AI-powered crop recommendations
 * 🌦️ Real-time weather information
@@ -274,7 +274,7 @@ Then open a Pull Request.
 
 ⸻
 
-🌍 Why AgriTwin?
+🌍 Why Cropify?
 
              🌱
           AGRICULTURE
@@ -297,7 +297,7 @@ Then open a Pull Request.
                ▼
         🌾 SMART FARMING
 
-AgriTwin isn’t just a landing page.
+Cropify isn’t just a landing page.
 
 It is a visual representation of how agriculture and technology can come together to build a smarter future.
 
@@ -306,7 +306,7 @@ It is a visual representation of how agriculture and technology can come togethe
 ⭐ Project
 
 <p align="center">
-  <strong>🌱 AgriTwin</strong>
+  <strong>🌱 Cropify</strong>
   <br>
   <i>Digital Intelligence for Smarter Agriculture</i>
   <br><br>
